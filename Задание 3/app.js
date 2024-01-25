@@ -1,3 +1,27 @@
-let students = [['Microsoft', 'Apple', 'Linux', 'Huawei', 'Honor'],['McDonalds', 'BurgerKing', 'KFC', 'Wendys', 'Blinberi'],['Magnit', 'METRO', 'Pyaterochka', 'Perekrestok', 'PokupALKO'],['Haier', 'MSI','HP', 'Lenovo', 'Thunderbolt']];
-console.log(students);
-console.log(students[0][1]);
+const colleges = [
+    {
+        name: "Иван",
+        lastName: "Иванов",
+        age: 18,
+        hobby: ["ПК", "Кодинг", "Сборка ПК"],
+        responsibilities: {
+            first: "Слушать маму!!!",
+            second: "Хорошо учиться",
+            third: "Развиваться, соединяя учебы с работой"
+        } 
+    },
+    {
+        name: "Сигизмунд",
+        lastName: "Хохлятский",
+        age: 532,
+        specialisation: ["Алгебра","Геометрия","Информатика"],
+        additionalSpecialisation: {
+            first: "Язык программирования Паскаль",
+            second: "Язык программирования C#",
+            third: "База языка программирования JS"
+        }
+    }
+];    
+
+console.log(colleges[0]["name"], colleges[0]["hobby"])
+console.log(colleges[1]["name"], colleges[1]["specialisation"])
