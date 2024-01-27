@@ -1,15 +1,13 @@
-// const peoples = ["Tom", "Vova", "Sam","Bob", "Nat", "Ivan", "Stas"];
-// for(let i = 0; i < peoples.length; i++) {
-// let result = peoples[i];
-// console.log(result);
-// }
+const studentsArray = [
+  {name: "Tom", age: 25, favoriteSubject: "IT", course: 2, studentsID: 43223, department: "Information technology", formOfEducation: "full-time" },  
+  {name: "Bob", age: 23, favoriteSubject: "Math", course: 1, studentsID: 84431, department: "Printing", formOfEducation: "correspondence" }, 
+  {name: "Stan", age: 36, favoriteSubject: "Information technology", course: 4, studentsID: 23455, department: "Power industry", formOfEducation: "full-time" },
+  {name: "Robert", age: 52, favoriteSubject: "English language", course: 3, studentsID: 30349, department: "Fire safety", formOfEducation: "correspondence"  } 
+];
 
-// Двухмерный массив
-const peoples = [["Tom", "hady", 39, "ул.пушкина"], ["Bill", "Gaits", 19, "ул.алега"], ["Djon", "Ten", 31, "ул.валеры"],["Tom", "Strengh", 32, "ул.ушкина"],["Tom", "Rhady", 34, "ул.кина"],["Tom", "Dady", 41, "ул.ушкина"],];
-for (let i = 0; i < peoples.length; i++) {
-    for (let j = 0; j < peoples[i].length; j++) {
-        let result = peoples[i][j];
-        console.log(result);
+for(let student of studentsArray) {
+    for(let key in student) {
+        console.log(key + ": " + student[key]);
     }
-    console.log("==========");
+    console.log("=============")
 }
