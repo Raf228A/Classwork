@@ -1,8 +1,7 @@
-function findMax(a, b) {
-    return Math.max(a, b)
+function sumArray(GP) {
+    return GP.reduce((sum, num) => sum + num, 0);
 }
 
-const num1 = 42;
-const num2 = 112;
-const maxValue = findMax(num1, num2);
-console.log(`Максимальное значение: ${maxValue}`);
+const numbers = [5, 10, 15, 20];
+const totalSum = sumArray(numbers);
+console.log(`Сумма элементов массива: ${totalSum}`);
