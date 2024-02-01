@@ -1,15 +1,13 @@
-function main (){
-    console.log("Привет я функция");
+function minMax(a, b) {
+    if (a > b){
+        console.log(`Значение a = ${a} больше значения b = ${b}`);
+    } else if (b > a) {
+        console.log(`Значение b = ${b} больше значения a = ${a}`);
+    } else if (a === undefined || b === undefined){
+        console.log("Вы не ввели значения");
+    } else{
+        console.log('Введите корректные знаения');
+    }
 }
 
-function sum(a, b){
-    let result = a + b;
-    console.log(result)
-}
-function student (firstName, lastName, group) {
-    alert(`Привет, ${firstName} ${lastName}. Я знаю, что ты из группы - ${group}`);
-}
-let fName = prompt("Введите имя");
-let lName = prompt("Введите фамилию");
-let sGroup = prompt("Введите название группы");
-student(fName, lName, sGroup);
+minMax("fdsfsd", 14);
