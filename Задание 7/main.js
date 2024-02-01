@@ -1,6 +1,8 @@
- for (let i = 1; i <= 100; i++) {
-        if (i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
-            console.log(i);
-        }
-    }
-    
+function findMax(a, b) {
+    return Math.max(a, b)
+}
+
+const num1 = 42;
+const num2 = 112;
+const maxValue = findMax(num1, num2);
+console.log(`Максимальное значение: ${maxValue}`);
