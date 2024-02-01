@@ -1,7 +1,6 @@
-function filterNumbers(RafArm) {
-    return RafArm.filter(num => num % 3 === 0 || num % 5 === 0 || num % 7 === 0);
-}
-
-const inputArray = [11, 21, 30, 37, 42, 45, 70];
-const filteredArray = filterNumbers(inputArray);
-console.log(filteredArray);
+ for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
+            console.log(i);
+        }
+    }
+    
