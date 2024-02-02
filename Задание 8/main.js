@@ -4,7 +4,6 @@
     console.log(`Хобби: ${student.hobbies}`);
     for(let contact in student.contacts) {
         console.log(`Контакты: ${student.contacts[contact]}`);
-
     }
 }
 
