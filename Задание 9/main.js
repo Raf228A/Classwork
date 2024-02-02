@@ -1,13 +1,13 @@
-class MassivSumCalculat {
-    constructor(numbers) {
-        this.numbers = numbers;
-    }
-    calculateSum() {
-        return this.numbers.reduce((sum, num) => sum + num, 0);
-    }
+class MaxCalculator{
+   constructor(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
+   }
+   findMax() {
+    return Math.max(this.num1, this.num2);
+   }
 }
 
-let numbersMassiv = [1, 2, 3, 4, 5];
-let sumCalcut = new MassivSumCalculat(numbersMassiv);
-let sumResult = sumCalcut.calculateSum();
-console.log(sumResult);
+let calc = new MaxCalculator(5, 8);
+let result = calc.findMax();
+console.log(result);
