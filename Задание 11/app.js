@@ -1,28 +1,26 @@
-class FactorialCalculator {
-    constructor(numbers) {
-        this.number = numbers;
-        this.result = this.calculateFactorial();
+class ArithmeticProgressionSumCalculator {
+    constructor(firstTerm, difference, numberOfTerms) {
+        this.firstTerm = firstTerm;
+        this.difference = difference;
+        this.numberOfTerms = numberOfTerms;
+        this.sum = this.calculateSum();
     }
 
-    calculateFactorial() {
-        if (this.number < 0) {
-            return "Факториал не определен для отрицательных чисел.";
-        } else if (this.number === 0 || this.number === 1) {
-            return 1;
-        } else {
-            let result = 1;
-            for (let i = 2; i <= this.number; i++) {
-                result *= i;
-            }
-            return result;
+    calculateSum() {
+        if (this.numberOfTerms <= 0){
+            return "Кол-во членов должно быть положительным"
         }
+
+        return (this.numberOfTerms / 2) * (2 * this.firstTerm + (this.numberOfTerms - 1) * this.difference);
     }
 
     print() {
-        console.log(`Факториал ${this.number} равен ${this.result}`);
+        console.log(`Сумма арифметической прогрессии: ${this.sum}`);
     }
 }
 
-const number= 5;
-const result = new FactorialCalculator(number);
-result.print();
+const firstTerm = 3;
+const difference = 2;
+const numberOfTerms = 4;
+const progressionSumCalculator = new ArithmeticProgressionSumCalculator(firstTerm, difference, numberOfTerms);
+progressionSumCalculator.print();
