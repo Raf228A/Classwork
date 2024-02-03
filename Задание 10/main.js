@@ -1,25 +1,23 @@
-class DivisibleNumbersPrinter {
+class DivisibleByThreeChecker {
+    numbersArray;
+    resultArray;
+    constructor(numbers) {
+        this.numbersArray = numbers;
+    }
 
-    i;
-    pDivisibleNumbers;
-    printDivisibleNumbers() {
-        this.i = [];
-        for (let i = 0; i <= 100; i++) {
-            if (i % 3 === 0 || i % 5 === 0 || i % 7 === 0) {
-                this.i.push(i);
-            }
-        }
-        return this.i;
+    hasNumberDivisibleByThree() {
+        return this.numbersArray.some(num => num % 3 === 0);
     }
 
     print() {
-        this.pDivisibleNumbers = this.printDivisibleNumbers();
-        console.log(this.pDivisibleNumbers);
+        if (this.hasNumberDivisibleByThree()) {
+            console.log("Да");
+        } else {
+            console.log("Нет");
+        }
     }
-   
-
 }
 
-const printer = new DivisibleNumbersPrinter();
-printer.print();
-    
+const numbersArray = [2, 5, 7, 11, 14];
+const resultArray = new DivisibleByThreeChecker(numbersArray);
+resultArray.print();
