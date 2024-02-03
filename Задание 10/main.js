@@ -1,23 +1,25 @@
-class FilterArrays {
-    numbersArray;
-    resultArray;
+class DivisibleNumbersPrinter {
 
-    constructor(numbers) {
-        this.numbersArray = numbers;
-    }
-
-    filter() {
-        return this.numbersArray.filter(num => num % 3 === 0 || num % 5 === 0 || num % 7 === 0);
+    i;
+    pDivisibleNumbers;
+    printDivisibleNumbers() {
+        this.i = [];
+        for (let i = 0; i <= 100; i++) {
+            if (i % 3 === 0 || i % 5 === 0 || i % 7 === 0) {
+                this.i.push(i);
+            }
+        }
+        return this.i;
     }
 
     print() {
-        this.resultArray = this.filter();
-        console.log(this.resultArray)
+        this.pDivisibleNumbers = this.printDivisibleNumbers();
+        console.log(this.pDivisibleNumbers);
     }
-    
-    
-}
-const numbersArray =[1, 5, 15, 9, 2];
-const resultArray = new FilterArrays(numbersArray);
-resultArray.print();
+   
 
+}
+
+const printer = new DivisibleNumbersPrinter();
+printer.print();
+    
