@@ -1,13 +1,20 @@
-class MaxCalculator{
-   constructor(num1, num2) {
-    this.num1 = num1;
-    this.num2 = num2;
+class NegativeNumberChecker{
+   constructor(numbers) {
+    this.numbers = numbers;
    }
-   findMax() {
-    return Math.max(this.num1, this.num2);
+   hasNegativeNumber() {
+    return this.numbers.some(num => num < 0);
+   }
+
+   checkAndOutput() {
+      if(this.hasNegativeNumber()) {
+         console.log("Да");
+      } else {
+         console.log("Нет")
+      }
    }
 }
 
-let calc = new MaxCalculator(5, 8);
-let result = calc.findMax();
-console.log(result);
+let numbersArray = [1, 2, -3, 4, 5];
+let negativeChecker = new NegativeNumberChecker(numbersArray);
+negativeChecker.checkAndOutput();
