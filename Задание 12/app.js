@@ -1,30 +1,28 @@
-class Asset { 
-    constructor(name, cost) { 
-        this.name = name; 
-        this.cost = cost; 
-    } 
-} 
- 
- 
-class FinancialAsset extends Asset { 
-    constructor(name, cost, yieldRate, investmentType) { 
-        super(name, cost); 
-        this.yieldRate = yieldRate;
-        this.investmentType = investmentType; 
-    } 
-} 
-
-class RealAsset extends Asset {
-    constructor(name, cost, address, assetType) {
-        super(name, cost);
-        this.address = address;
-        this.assetType = assetType;
+class Animal {
+    constructor(species, habitat) {
+        this.species = species;
+        this.habitat = habitat;
     }
 }
 
-const financialAsset = new FinancialAsset("Stocks", 10000, 0.05, "Equitilies");
-const realAsset = new RealAsset("Property", 500000, "34 Pushkina-Kolotushkina St.", "Residental");
-console.log(financialAsset);
-console.log(realAsset);
- 
- 
+class Mammal extends Animal {
+    constructor(species, habitat, dietType, reproductionMethod) {
+        super(species, habitat);
+        this.dietType = dietType;
+        this.reproductionMethod = reproductionMethod;
+
+    }
+}
+
+class Bird extends Animal {
+    constructor(species, habitat, locomotion, nestingPlaces) {
+        super(species, habitat);
+        this.locomotion = locomotion;
+        this.nestingPlaces = nestingPlaces;
+    }
+}
+
+const mammal = new Mammal("Lion", "Savannah", "Carnivore", "Viviparous");
+const bird = new Bird("Eagle", "Mountains", "Flight", "Cliffs");
+console.log(mammal);
+console.log(bird);
